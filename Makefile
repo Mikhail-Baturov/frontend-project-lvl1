@@ -1,8 +1,11 @@
 install: # Установка модулей по локфайлу package-lock.json
 	npm ci
 
-brain-games: #Запуск игры
+brain-games: # Запуск игры
 	node bin/brain-games.js
 
-publish: #Имитация публикации без изменений в глобальном хранилище NPM
+publish: # Имитация публикации без изменений в глобальном хранилище NPM
 	npm publish --dry-run
+
+make lint: # Запуск локально установленного пакета eslint
+	npx eslint
