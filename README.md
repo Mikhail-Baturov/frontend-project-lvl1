@@ -4,3 +4,5 @@
 ![example workflow](https://github.com/Mikhail-Baturov/frontend-project-lvl1/actions/workflows/make-lint.yml/badge.svg)
  
  https://asciinema.org/connect/1f524207-11fc-4d54-97ad-84ebfb594f15
+ 
+ https://asciinema.org/a/uymWwJNOjo40FoIxSsEojyZGb
