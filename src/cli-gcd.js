@@ -6,10 +6,6 @@ function logicsGameBrainGcd() {
     let num1 = Math.floor(Math.random() * 100);
     let num2 = Math.floor(Math.random() * 100);
     let correctResult = 0;
-<<<<<<< HEAD
-    
-=======
->>>>>>> origin/master
     console.log(`Question: ${num1} ${num2}`);
     const answer = readlinesync.question('Your answer: ');
     while (num1 != 0 && num2 != 0) {
