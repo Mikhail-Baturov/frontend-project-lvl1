@@ -7,4 +7,8 @@
  
  https://asciinema.org/a/uymWwJNOjo40FoIxSsEojyZGb
  
+<<<<<<< HEAD
  https://asciinema.org/a/EmZwvtIW414RARSUV1xJLzHcT
+=======
+ https://asciinema.org/a/JRXx8qhQDEeeANCF7YYJfH7dY
+>>>>>>> origin/master
