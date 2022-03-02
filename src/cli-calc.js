@@ -2,7 +2,7 @@ import readlinesync from 'readline-sync';
 import { finishGame, playGame } from './index.js';
 
 function logicsGameBrainCalc() {
-  const result = true;
+  let result = true;
   const num1 = Math.floor(Math.random() * 10);
   const num2 = Math.floor(Math.random() * 10);
   const operators = ['+', '-', '*'];
