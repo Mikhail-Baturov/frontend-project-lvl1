@@ -7,10 +7,12 @@ function logicsGameBrainPrime() {
   console.log(`Question: ${num}`);
   const answer = readlinesync.question('Your answer: ');
   let isPrime = true;
-  for (let divisor = 2; divisor <= num / 2; divisor += 1) {
+  let divisor = 2;
+  while (isPrime && divisor <= num / 2) {
     if (num % divisor === 0) {
       isPrime = false;
     }
+    divisor += 1;
   }
   if (isPrime) {
     switch (true) {
