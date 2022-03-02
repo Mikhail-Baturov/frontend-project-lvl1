@@ -16,12 +16,12 @@ function logicsGameBrainGcd() {
     console.log('Correct!');
   } else {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctResult}'.`);
-    return result = false;
+    result = false;
   }
   return result;
 }
 
-export function gameBrainGcd(userName) {
+export default function gameBrainGcd(userName) {
   console.log('Find the greatest common divisor of given numbers.');
   const gameResult = playGame(logicsGameBrainGcd);
   finishGame(userName, gameResult);

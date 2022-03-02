@@ -18,7 +18,7 @@ function logicsGameBrainPrime() {
     switch (true) {
       case (answer !== 'yes'):
         console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'.`);
-        return result = false;
+        result = false;
       default:
         console.log('Correct!');
     }
@@ -27,7 +27,7 @@ function logicsGameBrainPrime() {
     switch (true) {
       case (answer !== 'no'):
         console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.`);
-        return result = false;
+        result = false;
       default:
         console.log('Correct!');
     }
@@ -35,7 +35,7 @@ function logicsGameBrainPrime() {
   return result;
 }
 
-export function gameBrainPrime(userName) {
+export default function gameBrainPrime(userName) {
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   const gameResult = playGame(logicsGameBrainPrime);
   finishGame(userName, gameResult);

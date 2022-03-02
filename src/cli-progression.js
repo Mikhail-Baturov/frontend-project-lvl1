@@ -21,12 +21,12 @@ function logicsGameBrainProgression() {
     console.log('Correct!');
   } else {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctResult}'.`);
-    return result = false;
+    result = false;
   }
   return result;
 }
 
-export function gameBrainProgression(userName) {
+export default  function gameBrainProgression(userName) {
   console.log('What number is missing in the progression?');
   const gameResult = playGame(logicsGameBrainProgression);
   finishGame(userName, gameResult);

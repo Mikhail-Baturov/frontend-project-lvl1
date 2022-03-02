@@ -3,7 +3,11 @@ export function playGame(game) {
   let res = true;
   let counter = 1;
   while (res && counter <= numberOfGames) {
-    (res) ? res = game() : res = false;
+    if (res) {
+      res = game();
+    } else {
+      res = false;
+    }
     counter += 1;
   }
   if (res) {
