@@ -33,7 +33,7 @@ function logicsGameBrainPrime() {
   return result;
 }
 
-export default function gameBrainPrime(userName) {
+export function gameBrainPrime(userName) {
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   const gameResult = playGame(logicsGameBrainPrime);
   finishGame(userName, gameResult);

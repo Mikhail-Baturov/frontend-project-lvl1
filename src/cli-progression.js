@@ -26,7 +26,7 @@ function logicsGameBrainProgression() {
   return result;
 }
 
-export default function gameBrainProgression(userName) {
+export function gameBrainProgression(userName) {
   console.log('What number is missing in the progression?');
   const gameResult = playGame(logicsGameBrainProgression);
   finishGame(userName, gameResult);

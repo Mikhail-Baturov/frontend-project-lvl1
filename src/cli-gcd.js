@@ -21,7 +21,7 @@ function logicsGameBrainGcd() {
   return result;
 }
 
-export default function gameBrainGcd(userName) {
+export function gameBrainGcd(userName) {
   console.log('Find the greatest common divisor of given numbers.');
   const gameResult = playGame(logicsGameBrainGcd);
   finishGame(userName, gameResult);

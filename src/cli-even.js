@@ -28,7 +28,7 @@ function logicsGameBrainEven() {
     return result;
 }
 
-export default function gameBrainEven(userName) {
+export function gameBrainEven(userName) {
     console.log('Answer "yes" if the number is even, otherwise answer "no".');
     const gameResult = playGame(logicsGameBrainEven);
     finishGame(userName, gameResult);

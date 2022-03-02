@@ -33,7 +33,7 @@ function logicsGameBrainCalc() {
   return result;
 }
 
-export default function gameBrainCalc(userName) {
+export function gameBrainCalc(userName) {
   console.log('What is the result of the expression?');
   const gameResult = playGame(logicsGameBrainCalc);
   finishGame(userName, gameResult);
