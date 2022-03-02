@@ -19,6 +19,7 @@ function logicsGameBrainPrime() {
       case (answer !== 'yes'):
         console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'.`);
         result = false;
+        break;
       default:
         console.log('Correct!');
     }
@@ -28,6 +29,7 @@ function logicsGameBrainPrime() {
       case (answer !== 'no'):
         console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.`);
         result = false;
+        break;
       default:
         console.log('Correct!');
     }

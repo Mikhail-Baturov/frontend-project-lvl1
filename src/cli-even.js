@@ -11,6 +11,7 @@ function logicsGameBrainEven() {
       case (answer !== 'yes'):
         console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'.`);
         result = false;
+        break;
       default:
         console.log('Correct!');
     }
@@ -20,6 +21,7 @@ function logicsGameBrainEven() {
       case (answer !== 'no'):
         console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.`);
         result = false;
+        break;
       default:
         console.log('Correct!');
     }
@@ -28,7 +30,7 @@ function logicsGameBrainEven() {
 }
 
 export default function gameBrainEven(userName) {
-    console.log('Answer "yes" if the number is even, otherwise answer "no".');
-    const gameResult = playGame(logicsGameBrainEven);
-    finishGame(userName, gameResult);
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  const gameResult = playGame(logicsGameBrainEven);
+  finishGame(userName, gameResult);
 }

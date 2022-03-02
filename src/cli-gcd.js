@@ -9,7 +9,11 @@ function logicsGameBrainGcd() {
   console.log(`Question: ${num1} ${num2}`);
   const answer = readlinesync.question('Your answer: ');
   while (num1 !== 0 && num2 !== 0) {
-    (num1 > num2) ? num1 %= num2 : num2 %= num1;
+    if (num1 > num2) {
+      num1 %= num2;
+    } else {
+      num2 %= num1;
+    }
   }
   correctResult = num1 + num2;
   if (Number(answer) === correctResult) {
