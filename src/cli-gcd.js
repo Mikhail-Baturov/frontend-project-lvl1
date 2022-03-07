@@ -1,13 +1,8 @@
-import readlinesync from 'readline-sync';
-import { finishGame, playGame } from './index.js';
-
-function logicsGameBrainGcd() {
-  let result = true;
+export default function dataForGameBrainGcd() {
   let num1 = Math.floor(Math.random() * 100);
   let num2 = Math.floor(Math.random() * 100);
-  let correctResult = 0;
-  console.log(`Question: ${num1} ${num2}`);
-  const answer = readlinesync.question('Your answer: ');
+  const questionData = `${num1} ${num2}`;
+  let correctAnswer = 0;
   while (num1 !== 0 && num2 !== 0) {
     if (num1 > num2) {
       num1 %= num2;
@@ -15,18 +10,6 @@ function logicsGameBrainGcd() {
       num2 %= num1;
     }
   }
-  correctResult = num1 + num2;
-  if (Number(answer) === correctResult) {
-    console.log('Correct!');
-  } else {
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctResult}'.`);
-    result = false;
-  }
-  return result;
-}
-
-export default function gameBrainGcd(userName) {
-  console.log('Find the greatest common divisor of given numbers.');
-  const gameResult = playGame(logicsGameBrainGcd);
-  finishGame(userName, gameResult);
+  correctAnswer = num1 + num2;
+  return [questionData, correctAnswer];
 }

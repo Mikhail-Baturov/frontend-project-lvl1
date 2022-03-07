@@ -1,25 +1,46 @@
-export function playGame(game) {
+import readlinesync from 'readline-sync';
+
+const playGame = (nameofGame) => {
   const numberOfGames = 3;
-  let res = true;
+  let result = true;
   let counter = 1;
-  while (res && counter <= numberOfGames) {
-    if (res) {
-      res = game();
+  while (result && counter <= numberOfGames) {
+    if (result) {
+      result = checkAnswer(nameofGame());
     } else {
-      res = false;
+      result = false;
     }
     counter += 1;
   }
-  if (res) {
+  if (result) {
     return 'win';
   }
   return 'lose';
 }
 
-export function finishGame(userName, result) {
+const checkAnswer = (functionData) => {
+  let result = true;
+  const [questionData, correctAnswer] = functionData;
+  console.log(`Question: ${questionData}`);
+  let answer = readlinesync.question('Your answer: ');
+  if (typeof(correctAnswer) === 'number') {
+    answer = Number(answer);
+  }
+  if (answer === correctAnswer) {
+    console.log('Correct!');
+  } else {
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+    result = false;
+  }
+  return result;
+}
+
+const finishGame = (userName, result) => {
   if (result === 'win') {
     console.log(`Congratulations, ${userName}!`);
   } else {
     console.log(`Let's try again, ${userName}!`);
   }
 }
+
+export { playGame, finishGame }
