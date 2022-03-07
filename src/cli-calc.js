@@ -1,5 +1,4 @@
 export default function dataForGameBrainCalc() {
-  let result = true;
   const num1 = Math.floor(Math.random() * 10);
   const num2 = Math.floor(Math.random() * 10);
   const operators = ['+', '-', '*'];
@@ -19,6 +18,6 @@ export default function dataForGameBrainCalc() {
     default:
       break;
   }
-  const questionData = `${num1} ${operator} ${num2}`
+  const questionData = `${num1} ${operator} ${num2}`;
   return [questionData, correctAnswer];
 }

@@ -1,5 +1,22 @@
 import readlinesync from 'readline-sync';
 
+const checkAnswer = (functionData) => {
+  let result = true;
+  const [questionData, correctAnswer] = functionData;
+  console.log(`Question: ${questionData}`);
+  let answer = readlinesync.question('Your answer: ');
+  if (typeof (correctAnswer) === 'number') {
+    answer = Number(answer);
+  }
+  if (answer === correctAnswer) {
+    console.log('Correct!');
+  } else {
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+    result = false;
+  }
+  return result;
+};
+
 const playGame = (nameofGame) => {
   const numberOfGames = 3;
   let result = true;
@@ -16,24 +33,7 @@ const playGame = (nameofGame) => {
     return 'win';
   }
   return 'lose';
-}
-
-const checkAnswer = (functionData) => {
-  let result = true;
-  const [questionData, correctAnswer] = functionData;
-  console.log(`Question: ${questionData}`);
-  let answer = readlinesync.question('Your answer: ');
-  if (typeof(correctAnswer) === 'number') {
-    answer = Number(answer);
-  }
-  if (answer === correctAnswer) {
-    console.log('Correct!');
-  } else {
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-    result = false;
-  }
-  return result;
-}
+};
 
 const finishGame = (userName, result) => {
   if (result === 'win') {
@@ -41,6 +41,6 @@ const finishGame = (userName, result) => {
   } else {
     console.log(`Let's try again, ${userName}!`);
   }
-}
+};
 
-export { playGame, finishGame }
+export { playGame, finishGame };
