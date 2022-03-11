@@ -1,7 +1,7 @@
 import readlinesync from 'readline-sync';
 import { greeting } from './cli.js';
 
-export default function playGame (dataForGame) {
+export default function playGame(dataForGame) {
   const userName = greeting();
   const numberOfGames = 3;
   let result = true;
