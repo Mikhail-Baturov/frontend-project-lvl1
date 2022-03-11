@@ -11,7 +11,7 @@ const calculate = (num1, num2, operator) => {
     default:
       return null;
   }
-}
+};
 
 export default function dataForGameBrainCalc() {
   const num1 = randomNumber(0, 9);
@@ -22,4 +22,4 @@ export default function dataForGameBrainCalc() {
   const correctAnswer = calculate(num1, num2, operator);
   const questionData = `${num1} ${operator} ${num2}`;
   return [questionData, String(correctAnswer)];
-};
+}

@@ -9,4 +9,4 @@ export default function dataForGameBrainEven() {
   const questionData = Math.floor(Math.random() * 100);
   const correctAnswer = isEven(questionData);
   return [questionData, correctAnswer];
-};
+}

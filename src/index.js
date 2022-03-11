@@ -1,7 +1,7 @@
 import readlinesync from 'readline-sync';
-import { greeting } from '../src/cli.js';
+import { greeting } from './cli.js';
 
-const playGame = (dataForGame) => {
+export default function playGame (dataForGame) {
   const userName = greeting();
   const numberOfGames = 3;
   let result = true;
@@ -9,7 +9,7 @@ const playGame = (dataForGame) => {
   while (result && counter <= numberOfGames) {
     const [questionData, correctAnswer] = dataForGame();
     console.log(`Question: ${questionData}`);
-    let answer = readlinesync.question('Your answer: ');
+    const answer = readlinesync.question('Your answer: ');
     if (answer === correctAnswer) {
       console.log('Correct!');
     } else {
@@ -23,6 +23,4 @@ const playGame = (dataForGame) => {
   } else {
     console.log(`Let's try again, ${userName}!`);
   }
-};
-
-export { playGame };
+}

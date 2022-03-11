@@ -18,4 +18,4 @@ export default function dataForGameBrainPrime() {
     correctAnswer = 'no';
   }
   return [questionData, correctAnswer];
-};
+}
