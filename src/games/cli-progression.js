@@ -1,3 +1,5 @@
+import playGame from '../index.js';
+
 const makeProgression = (firstNum, step, progressionLength) => {
   const progression = [];
   for (let elemNumber = 0; elemNumber < progressionLength; elemNumber += 1) {
@@ -6,7 +8,7 @@ const makeProgression = (firstNum, step, progressionLength) => {
   return progression;
 };
 
-export default function dataForGameBrainProgression() {
+const dataForGameBrainProgression = () => {
   const firstNum = Math.floor(Math.random() * 10);
   const step = Math.floor(Math.random() * 10);
   const progressionLength = 5 + Math.floor(Math.random() * 5);
@@ -16,4 +18,8 @@ export default function dataForGameBrainProgression() {
   progression[j] = '..';
   const questionData = progression.join(' ');
   return [questionData, String(correctAnswer)];
+}
+
+export default function BrainProgression() {
+  playGame(dataForGameBrainProgression);
 }

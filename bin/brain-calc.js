@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import dataForGameBrainCalc from '../src/games/cli-calc.js';
-import playGame from '../src/index.js';
+import GameBrainCalc from '../src/games/cli-calc.js';
 
-playGame(dataForGameBrainCalc);
+GameBrainCalc();

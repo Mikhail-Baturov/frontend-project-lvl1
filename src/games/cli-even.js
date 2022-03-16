@@ -1,12 +1,19 @@
+import playGame from '../index.js';
+
 const isEven = (num) => {
   if (num % 2 === 0) {
-    return 'yes';
+    return true;
   }
-  return 'no';
+return false;
 };
 
-export default function dataForGameBrainEven() {
+const dataForGameBrainEven = () => {
   const questionData = Math.floor(Math.random() * 100);
-  const correctAnswer = isEven(questionData);
+  let correctAnswer = '';
+  (isEven(questionData)) ? correctAnswer = 'yes': correctAnswer = 'no';
   return [questionData, correctAnswer];
+};
+
+export default function GameBrainEven() {
+  playGame(dataForGameBrainEven);
 }
