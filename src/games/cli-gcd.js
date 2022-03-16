@@ -19,7 +19,7 @@ const dataForGameBrainGcd = () => {
   const questionData = `${num1} ${num2}`;
   const correctAnswer = findGCD(num1, num2);
   return [questionData, String(correctAnswer)];
-}
+};
 
 export default function GameBrainGcd() {
   playGame(dataForGameBrainGcd);
