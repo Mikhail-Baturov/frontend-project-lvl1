@@ -4,13 +4,17 @@ const isEven = (num) => {
   if (num % 2 === 0) {
     return true;
   }
-return false;
+  return false;
 };
 
 const dataForGameBrainEven = () => {
   const questionData = Math.floor(Math.random() * 100);
   let correctAnswer = '';
-  (isEven(questionData)) ? correctAnswer = 'yes': correctAnswer = 'no';
+  if (isEven(questionData)) {
+    correctAnswer = 'yes';
+  } else {
+    correctAnswer = 'no';
+  }
   return [questionData, correctAnswer];
 };
 

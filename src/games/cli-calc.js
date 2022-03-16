@@ -1,4 +1,3 @@
-
 import playGame from '../index.js';
 
 const randomNumber = (min, max) => Math.floor(min + Math.random() * (max - min + 1));

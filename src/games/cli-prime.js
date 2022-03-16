@@ -15,7 +15,11 @@ const isPrime = (num) => {
 const dataForGameBrainPrime = () => {
   const questionData = Math.floor(Math.random() * 100);
   let correctAnswer = '';
-  (isPrime(questionData)) ? correctAnswer = 'yes' : correctAnswer = 'no';
+  if (isPrime(questionData)) {
+    correctAnswer = 'yes';
+  } else {
+    correctAnswer = 'no';
+  }
   return [questionData, correctAnswer];
 };
 

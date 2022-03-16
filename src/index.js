@@ -19,4 +19,5 @@ export default function playGame(dataForGame) {
     }
   }
   console.log(`Congratulations, ${userName}!`);
+  return true;
 }

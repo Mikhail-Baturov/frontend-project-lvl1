@@ -18,7 +18,7 @@ const dataForGameBrainProgression = () => {
   progression[j] = '..';
   const questionData = progression.join(' ');
   return [questionData, String(correctAnswer)];
-}
+};
 
 export default function BrainProgression() {
   playGame(dataForGameBrainProgression);
