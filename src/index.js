@@ -15,9 +15,9 @@ export default function playGame(dataForGame) {
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${userName}!`);
-      return false;
+      return;
     }
   }
   console.log(`Congratulations, ${userName}!`);
-  return true;
+  return;
 }

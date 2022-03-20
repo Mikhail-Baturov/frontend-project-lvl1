@@ -8,14 +8,18 @@ const makeProgression = (firstNum, step, progressionLength) => {
   return progression;
 };
 
+const generateRandomNum = (firstNumOfRange, lastNumOfRange) => {
+  return firstNumOfRange + Math.floor(Math.random() * (lastNumOfRange - firstNumOfRange));
+};
+
 const dataForGameBrainProgression = () => {
-  const firstNum = Math.floor(Math.random() * 10);
-  const step = Math.floor(Math.random() * 10);
-  const progressionLength = 5 + Math.floor(Math.random() * 5);
+  const firstNum = generateRandomNum(0, 10);
+  const step = generateRandomNum(0, 10);
+  const progressionLength = generateRandomNum(5, 10);
   const progression = makeProgression(firstNum, step, progressionLength);
-  const j = Math.floor(Math.random() * progressionLength);
-  const correctAnswer = progression[j];
-  progression[j] = '..';
+  const indexOfHiddenNum = Math.floor(Math.random() * progressionLength);
+  const correctAnswer = progression[indexOfHiddenNum];
+  progression[indexOfHiddenNum] = '..';
   const questionData = progression.join(' ');
   return [questionData, String(correctAnswer)];
 };
