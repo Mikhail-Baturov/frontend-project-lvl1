@@ -8,9 +8,7 @@ const makeProgression = (firstNum, step, progressionLength) => {
   return progression;
 };
 
-const generateRandomNum = (firstNumOfRange, lastNumOfRange) => {
-  return firstNumOfRange + Math.floor(Math.random() * (lastNumOfRange - firstNumOfRange));
-};
+const generateRandomNum = (num1, num2) => num1 + Math.floor(Math.random() * (num2 - num1));
 
 const dataForGameBrainProgression = () => {
   const firstNum = generateRandomNum(0, 10);
