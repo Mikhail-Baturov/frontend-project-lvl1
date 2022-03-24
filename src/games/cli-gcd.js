@@ -1,4 +1,5 @@
 import playGame from '../index.js';
+import { generateRandomNum } from './cli-progression.js'
 
 const findGCD = (num1, num2) => {
   let number1 = num1;
@@ -14,8 +15,8 @@ const findGCD = (num1, num2) => {
 };
 
 const dataForGameBrainGcd = () => {
-  const num1 = Math.floor(Math.random() * 100);
-  const num2 = Math.floor(Math.random() * 100);
+  const num1 = generateRandomNum(0, 100);
+  const num2 = generateRandomNum(0, 100);
   const questionData = `${num1} ${num2}`;
   const correctAnswer = findGCD(num1, num2);
   return [questionData, String(correctAnswer)];

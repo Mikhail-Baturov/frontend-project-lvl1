@@ -1,4 +1,5 @@
 import playGame from '../index.js';
+import { generateRandomNum } from './cli-progression.js'
 
 const isPrime = (num) => {
   if (num === 0 || num === 1) {
@@ -13,7 +14,7 @@ const isPrime = (num) => {
 };
 
 const dataForGameBrainPrime = () => {
-  const questionData = Math.floor(Math.random() * 100);
+  const questionData = generateRandomNum(0, 100);
   let correctAnswer = '';
   if (isPrime(questionData)) {
     correctAnswer = 'yes';

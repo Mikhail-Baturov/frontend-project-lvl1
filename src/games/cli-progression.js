@@ -22,6 +22,8 @@ const dataForGameBrainProgression = () => {
   return [questionData, String(correctAnswer)];
 };
 
-export default function BrainProgression() {
+const BrainProgression = () => {
   playGame(dataForGameBrainProgression);
-}
+};
+
+export { generateRandomNum, BrainProgression }

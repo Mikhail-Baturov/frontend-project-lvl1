@@ -1,6 +1,5 @@
 import playGame from '../index.js';
-
-const randomNumber = (min, max) => Math.floor(min + Math.random() * (max - min + 1));
+import { generateRandomNum } from './cli-progression.js'
 
 const calculate = (num1, num2, operator) => {
   switch (operator) {
@@ -16,10 +15,10 @@ const calculate = (num1, num2, operator) => {
 };
 
 const dataForGameBrainCalc = () => {
-  const num1 = randomNumber(0, 9);
-  const num2 = randomNumber(0, 9);
+  const num1 = generateRandomNum(0, 9);
+  const num2 = generateRandomNum(0, 9);
   const operators = ['+', '-', '*'];
-  const operatorNumber = randomNumber(0, operators.length - 1);
+  const operatorNumber = generateRandomNum(0, operators.length - 1);
   const operator = operators[operatorNumber];
   const correctAnswer = calculate(num1, num2, operator);
   const questionData = `${num1} ${operator} ${num2}`;

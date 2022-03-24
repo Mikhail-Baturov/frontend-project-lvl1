@@ -1,4 +1,5 @@
 import playGame from '../index.js';
+import { generateRandomNum } from './cli-progression.js'
 
 const isEven = (num) => {
   if (num % 2 === 0) {
@@ -8,7 +9,7 @@ const isEven = (num) => {
 };
 
 const dataForGameBrainEven = () => {
-  const questionData = Math.floor(Math.random() * 100);
+  const questionData = generateRandomNum(0, 100);
   let correctAnswer = '';
   if (isEven(questionData)) {
     correctAnswer = 'yes';
