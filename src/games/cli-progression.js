@@ -26,4 +26,4 @@ const BrainProgression = () => {
   playGame(dataForGameBrainProgression);
 };
 
-export { generateRandomNum, BrainProgression }
+export { generateRandomNum, BrainProgression };

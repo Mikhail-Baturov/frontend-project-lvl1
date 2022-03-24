@@ -1,5 +1,5 @@
 import playGame from '../index.js';
-import { generateRandomNum } from './cli-progression.js'
+import { generateRandomNum } from './cli-progression.js';
 
 const findGCD = (num1, num2) => {
   let number1 = num1;

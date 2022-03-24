@@ -1,5 +1,5 @@
 import playGame from '../index.js';
-import { generateRandomNum } from './cli-progression.js'
+import { generateRandomNum } from './cli-progression.js';
 
 const isPrime = (num) => {
   if (num === 0 || num === 1) {

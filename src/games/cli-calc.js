@@ -1,5 +1,5 @@
 import playGame from '../index.js';
-import { generateRandomNum } from './cli-progression.js'
+import { generateRandomNum } from './cli-progression.js';
 
 const calculate = (num1, num2, operator) => {
   switch (operator) {

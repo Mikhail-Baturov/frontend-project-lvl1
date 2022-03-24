@@ -1,5 +1,5 @@
 import playGame from '../index.js';
-import { generateRandomNum } from './cli-progression.js'
+import { generateRandomNum } from './cli-progression.js';
 
 const isEven = (num) => {
   if (num % 2 === 0) {
